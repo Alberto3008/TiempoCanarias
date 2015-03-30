@@ -13,6 +13,7 @@
 		D31C73121AC9CF9D00371F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31C73111AC9CF9D00371F1E /* Images.xcassets */; };
 		D31C73151AC9CF9D00371F1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31C73131AC9CF9D00371F1E /* LaunchScreen.xib */; };
 		D31C73211AC9CF9D00371F1E /* TiempoCanariasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C73201AC9CF9D00371F1E /* TiempoCanariasTests.swift */; };
+		D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */ = {isa = PBXBuildFile; fileRef = D31C732B1AC9D0EF00371F1E /* laplaya.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		D31C731A1AC9CF9D00371F1E /* TiempoCanariasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiempoCanariasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31C731F1AC9CF9D00371F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D31C73201AC9CF9D00371F1E /* TiempoCanariasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoCanariasTests.swift; sourceTree = "<group>"; };
+		D31C732B1AC9D0EF00371F1E /* laplaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplaya.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 		D31C73081AC9CF9D00371F1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D31C732A1AC9D0C900371F1E /* img */,
 				D31C73091AC9CF9D00371F1E /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +113,14 @@
 				D31C731F1AC9CF9D00371F1E /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D31C732A1AC9D0C900371F1E /* img */ = {
+			isa = PBXGroup;
+			children = (
+				D31C732B1AC9D0EF00371F1E /* laplaya.png */,
+			);
+			name = img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,6 +205,7 @@
 			files = (
 				D31C73101AC9CF9D00371F1E /* Main.storyboard in Resources */,
 				D31C73151AC9CF9D00371F1E /* LaunchScreen.xib in Resources */,
+				D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */,
 				D31C73121AC9CF9D00371F1E /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
