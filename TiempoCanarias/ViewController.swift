@@ -64,7 +64,7 @@ class ViewController: UIViewController {
     
     
     func tiempoWebService(){
-       let urlPath = "http://api.openweathermap.org/data/2.5/weather?id=\(ciudades[ciudadPicker.selectedRowInComponent(0)].id)&lang=sp"
+       let urlPath = "http://api.openweathermap.org/data/2.5/weather?id=\(ciudades[ciudadPicker.selectedRowInComponent(0)].id)&lang=sp&units=metric"
           println(urlPath)
         let url = NSURL(string: urlPath)
         
@@ -79,8 +79,7 @@ class ViewController: UIViewController {
             }
             
            var nsdata:NSData = NSData(data:data)
-            
-           println(nsdata)
+
            self.recuperarClima(nsdata)
             
             dispatch_async(dispatch_get_main_queue(),{ println(self.clima!); self.climaLabel.text = self.clima!})
