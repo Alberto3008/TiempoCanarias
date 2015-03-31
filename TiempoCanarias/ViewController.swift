@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Crashlytics
 
 class ViewController: UIViewController {
 
@@ -38,7 +40,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tiempoBttn(sender: AnyObject) {
+        CLSNSLogv("DIAOSASSJSAHJKSJKSKLJKLÑSADJKLASDJKL", getVaList([1]))
         println(ciudades[ciudadPicker.selectedRowInComponent(0)].nombre)
+        CLSLogv("Pulsacion del boton = Log awesomeness %d %d %@", getVaList([1, 2, "three"]))
+        Crashlytics.sharedInstance().crash()
+        
         tiempoWebService()
     }
 
