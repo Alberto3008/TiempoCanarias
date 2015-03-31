@@ -20,7 +20,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clima" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fxf-pp-rXg">
-                                <rect key="frame" x="29" y="166" width="316" height="21"/>
+                                <rect key="frame" x="29" y="166" width="316" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -57,6 +57,7 @@
                     <connections>
                         <outlet property="capturaTexto" destination="FI8-5m-wP6" id="o8b-dF-7Mb"/>
                         <outlet property="ciudadPicker" destination="WP1-J4-gF1" id="TwO-S7-owM"/>
+                        <outlet property="climaLabel" destination="Fxf-pp-rXg" id="LVQ-ab-NU0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
