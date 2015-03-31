@@ -10,7 +10,6 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var capturaTexto: UITextField!
     @IBOutlet weak var ciudadPicker: UIPickerView!
     @IBOutlet weak var climaLabel: UILabel!
     var clima:String?
