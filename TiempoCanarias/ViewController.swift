@@ -12,7 +12,13 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var ciudadPicker: UIPickerView!
     @IBOutlet weak var climaLabel: UILabel!
+    @IBOutlet weak var climaImg: UIImageView!
+ 
+    
+    
     var clima:String?
+    var img:String?
+    
     
     var ciudades = [
         Ciudad(nombre: "La Laguna", id: 2511401),
@@ -32,12 +38,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tiempoBttn(sender: AnyObject) {
-        println(ciudades[ciudadPicker.selectedRowInComponent(0)].id)
+        println(ciudades[ciudadPicker.selectedRowInComponent(0)].nombre)
         tiempoWebService()
-
     }
 
-
+// MARK: - Init ciudadPicker
     
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
@@ -62,10 +67,9 @@ class ViewController: UIViewController {
         }
     }
     
-    
+// MARK: - WebService API OpenWeatherMap
     func tiempoWebService(){
        let urlPath = "http://api.openweathermap.org/data/2.5/weather?id=\(ciudades[ciudadPicker.selectedRowInComponent(0)].id)&lang=sp&units=metric"
-          println(urlPath)
         let url = NSURL(string: urlPath)
         
         let session = NSURLSession.sharedSession()
@@ -82,7 +86,7 @@ class ViewController: UIViewController {
 
            self.recuperarClima(nsdata)
             
-            dispatch_async(dispatch_get_main_queue(),{ println(self.clima!); self.climaLabel.text = self.clima!})
+            dispatch_async(dispatch_get_main_queue(), { self.mostrarDatos() })
             
         })
         
@@ -108,11 +112,20 @@ class ViewController: UIViewController {
             //Recorre por el array de la respues de json del servidor
             jsonArray.enumerateObjectsUsingBlock({model, index, stop in
                  self.clima = model["description"] as? String
+                 self.img = model["icon"] as? String
             });
         }
     }
     
 
+    func mostrarDatos(){
+         println(self.clima!);
+        self.climaLabel.text = self.clima!
+        var rutaImg = "http://openweathermap.org/img/w/\(self.img!).png"
+        let url = NSURL(string: rutaImg)
+        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+        self.climaImg.image = UIImage(data: data!)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
