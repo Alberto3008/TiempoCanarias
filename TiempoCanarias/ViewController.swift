@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         CLSNSLogv("DIAOSASSJSAHJKSJKSKLJKLÑSADJKLASDJKL", getVaList([1]))
         println(ciudades[ciudadPicker.selectedRowInComponent(0)].nombre)
         CLSLogv("Pulsacion del boton = Log awesomeness %d %d %@", getVaList([1, 2, "three"]))
-        Crashlytics.sharedInstance().crash()
+       // Crashlytics.sharedInstance().crash()
         
         tiempoWebService()
     }
