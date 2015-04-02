@@ -16,7 +16,10 @@
 		D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */ = {isa = PBXBuildFile; fileRef = D31C732B1AC9D0EF00371F1E /* laplaya.png */; };
 		D33EE1A71ACAEB7200DC7E80 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33EE1A51ACAEB7200DC7E80 /* Crashlytics.framework */; };
 		D33EE1A81ACAEB7200DC7E80 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33EE1A61ACAEB7200DC7E80 /* Fabric.framework */; };
-		D33EE1B21ACB6FBA00DC7E80 /* ClimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1B11ACB6FBA00DC7E80 /* ClimaViewController.swift */; };
+		D33EE1B81ACC35CC00DC7E80 /* ClimaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */; };
+		D33EE1BA1ACC36CF00DC7E80 /* ClimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */; };
+		D33EE1BD1ACC3A6C00DC7E80 /* Clima.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1BC1ACC3A6C00DC7E80 /* Clima.swift */; };
+		D34166B81ACCC02D00833D80 /* ClimaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +46,10 @@
 		D31C732B1AC9D0EF00371F1E /* laplaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplaya.png; sourceTree = "<group>"; };
 		D33EE1A51ACAEB7200DC7E80 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 		D33EE1A61ACAEB7200DC7E80 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
-		D33EE1B11ACB6FBA00DC7E80 /* ClimaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaViewController.swift; sourceTree = "<group>"; };
+		D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaTableViewController.swift; sourceTree = "<group>"; };
+		D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaViewController.swift; sourceTree = "<group>"; };
+		D33EE1BC1ACC3A6C00DC7E80 /* Clima.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Clima.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D31C730A1AC9CF9D00371F1E /* AppDelegate.swift */,
+				D33EE1BB1ACC3A3D00DC7E80 /* Model */,
 				D33EE1B31ACB6FC800DC7E80 /* Controllers */,
 				D33EE1B41ACB6FED00DC7E80 /* Views */,
 				D31C73111AC9CF9D00371F1E /* Images.xcassets */,
@@ -144,8 +151,10 @@
 		D33EE1B31ACB6FC800DC7E80 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D33EE1B11ACB6FBA00DC7E80 /* ClimaViewController.swift */,
 				D31C730C1AC9CF9D00371F1E /* ViewController.swift */,
+				D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */,
+				D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */,
+				D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -156,6 +165,14 @@
 				D31C730E1AC9CF9D00371F1E /* Main.storyboard */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D33EE1BB1ACC3A3D00DC7E80 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D33EE1BC1ACC3A6C00DC7E80 /* Clima.swift */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,9 +293,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34166B81ACCC02D00833D80 /* ClimaTableViewCell.swift in Sources */,
+				D33EE1BD1ACC3A6C00DC7E80 /* Clima.swift in Sources */,
 				D31C730D1AC9CF9D00371F1E /* ViewController.swift in Sources */,
+				D33EE1BA1ACC36CF00DC7E80 /* ClimaViewController.swift in Sources */,
 				D31C730B1AC9CF9D00371F1E /* AppDelegate.swift in Sources */,
-				D33EE1B21ACB6FBA00DC7E80 /* ClimaViewController.swift in Sources */,
+				D33EE1B81ACC35CC00DC7E80 /* ClimaTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

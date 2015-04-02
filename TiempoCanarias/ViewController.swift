@@ -10,6 +10,8 @@ import UIKit
 import Fabric
 import Crashlytics
 
+var idCiudad:NSInteger = 0
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var ciudadPicker: UIPickerView!
@@ -18,7 +20,7 @@ class ViewController: UIViewController {
  
     
     
-    var clima:String?
+    var desClima:String?
     var img:String?
     
     
@@ -46,6 +48,9 @@ class ViewController: UIViewController {
        // Crashlytics.sharedInstance().crash()
         
         tiempoWebService()
+    }
+    @IBAction func SelectBttn(sender: AnyObject) {
+        idCiudad = ciudades[ciudadPicker.selectedRowInComponent(0)].id
     }
 
 // MARK: - Init ciudadPicker
@@ -111,26 +116,39 @@ class ViewController: UIViewController {
         
         println(jsonCompleto)
         
-        let arregloJsonClima = jsonCompleto["weather"]
+//        let arregloJsonClima = jsonCompleto["weather"]
+//        
+//        if let jsonArray = arregloJsonClima as? NSArray{
+//            
+//            //Recorre por el array de la respues de json del servidor
+//            jsonArray.enumerateObjectsUsingBlock({model, index, stop in
+//                 self.desClima = model["description"] as? String
+//                 self.img = model["icon"] as? String
+//            });
         
-        if let jsonArray = arregloJsonClima as? NSArray{
-            
-            //Recorre por el array de la respues de json del servidor
-            jsonArray.enumerateObjectsUsingBlock({model, index, stop in
-                 self.clima = model["description"] as? String
-                 self.img = model["icon"] as? String
-            });
-        }
+        var nowClima = Clima.fromCurrentDictionary(jsonCompleto as NSDictionary)
+        println("Nombre: \(nowClima.ciudad)")
+        println("ID: \(nowClima.id)")
+        println("Fecha: \(nowClima.fecha)")
+        println("Humedad: \(nowClima.humedad)")
+        println("Icono: \(nowClima.icono)")
+        println("Descripcion: \(nowClima.descripcion)")
+        println("Latitud: \(nowClima.latitud)")
+        println("Longitud: \(nowClima.longitud)")
+        println("Temperatura: \(nowClima.temp)")
+        println("MAX: \(nowClima.temp_max)")
+        println("MIN: \(nowClima.temp_min)")
+        println("Velocidad: \(nowClima.viento_vel)")
     }
     
 
     func mostrarDatos(){
-         println(self.clima!);
-        self.climaLabel.text = self.clima!
-        var rutaImg = "http://openweathermap.org/img/w/\(self.img!).png"
-        let url = NSURL(string: rutaImg)
-        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        self.climaImg.image = UIImage(data: data!)
+//         println(self.desClima!);
+//        self.climaLabel.text = self.desClima!
+//        var rutaImg = "http://openweathermap.org/img/w/\(self.img!).png"
+//        let url = NSURL(string: rutaImg)
+//        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+//        self.climaImg.image = UIImage(data: data!)
     }
     
     override func didReceiveMemoryWarning() {
