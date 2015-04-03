@@ -17,6 +17,7 @@ class ClimaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
     }
     
 

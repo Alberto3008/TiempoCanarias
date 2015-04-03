@@ -12,15 +12,16 @@ class Clima {
     var id:NSInteger?
     var ciudad:String?
     var fecha:NSDate?
-    var latitud:Float?
-    var longitud:Float?
+    var latitud:Double?
+    var longitud:Double?
     var descripcion:String?
     var icono:String?
-    var humedad:Float?
-    var viento_vel:Float?
-    var temp:Float?
-    var temp_max:Float?
-    var temp_min:Float?
+    var humedad:Double?
+    var viento_vel:Double?
+    var temp:Double?
+    var temp_max:Double?
+    var temp_min:Double?
+    var estacion:String?
     
     init(id: NSInteger){
         self.id=id
@@ -46,24 +47,24 @@ class Clima {
             let coordenadas = dictionary["coord"] as NSDictionary
             println("COORDENADAS >>>\(coordenadas)")
             
-            let latitud = coordenadas["lat"] as?  Float
-            let longitud = coordenadas["lon"] as? Float
+            let latitud = coordenadas["lat"] as?  Double
+            let longitud = coordenadas["lon"] as? Double
             
             var fechaunix = dictionary["dt"] as? NSTimeInterval
             let fecha:NSDate = NSDate (timeIntervalSince1970: fechaunix!)
             
             var main = dictionary["main"] as NSDictionary
-            let temp = main["temp"] as? Float
-            let temp_max = main["temp_max"] as? Float
-            let temp_min = main["temp_min"] as? Float
-            let humedad = main["humidity"] as? Float
+            let temp = main["temp"] as? Double
+            let temp_max = main["temp_max"] as? Double
+            let temp_min = main["temp_min"] as? Double
+            let humedad = main["humidity"] as? Double
             
             var descripcion = item["description"] as? String
             var icono = item["icon"] as? String
 
             
             var viento = dictionary["wind"] as NSDictionary
-            let viento_vel = viento["speed"] as? Float
+            let viento_vel = viento["speed"] as? Double
             
            
             clima.id=id
@@ -71,7 +72,7 @@ class Clima {
             clima.fecha=fecha
             clima.latitud=latitud
             clima.longitud=longitud
-            clima.descripcion=descripcion
+            clima.descripcion=mayusculas(descripcion!)
             clima.icono=icono
             clima.humedad=humedad
             clima.viento_vel=viento_vel
@@ -95,17 +96,17 @@ class Clima {
             let id = lugar["id"] as? NSInteger
             
             let coordenadas = lugar["coord"] as NSDictionary
-            let latitud = coordenadas["lat"] as?  Float
-            let longitud = coordenadas["lon"] as? Float
+            let latitud = coordenadas["lat"] as?  Double
+            let longitud = coordenadas["lon"] as? Double
             
             var fechaunix = item["dt"] as? NSTimeInterval
             let fecha:NSDate = NSDate (timeIntervalSince1970: fechaunix!)
             
             var main = item["temp"] as NSDictionary
-            let temp = main["day"] as? Float
-            let temp_max = main["max"] as? Float
-            let temp_min = main["min"] as? Float
-            let humedad = main["humidity"] as? Float
+            let temp = main["day"] as? Double
+            let temp_max = main["max"] as? Double
+            let temp_min = main["min"] as? Double
+            let humedad = main["humidity"] as? Double
             
             let tiempo = item["weather"] as? NSArray
             
@@ -116,8 +117,9 @@ class Clima {
                 descripcion = item["description"] as String
                 icono = item["icon"] as String
             })
+            if icono == "01n" { icono = "01d" }
             
-            let viento_vel = item["speed"] as? Float
+            let viento_vel = item["speed"] as? Double
             
             let clima = Clima (id:id!)
             
@@ -125,7 +127,7 @@ class Clima {
             clima.fecha=fecha
             clima.latitud=latitud
             clima.longitud=longitud
-            clima.descripcion=descripcion
+            clima.descripcion = mayusculas(descripcion)
             clima.icono=icono
             clima.humedad=humedad
             clima.viento_vel=viento_vel
@@ -139,4 +141,11 @@ class Clima {
     }
 
 
+
+}
+
+func mayusculas(string:String)->String{
+    var resul = string
+    resul.replaceRange(resul.startIndex...resul.startIndex, with: String(resul[resul.startIndex]).capitalizedString)
+    return resul
 }

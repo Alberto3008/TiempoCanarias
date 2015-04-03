@@ -8,6 +8,8 @@
 
 import UIKit
 
+ var clima:Clima?
+
 class ClimaViewController: UIViewController {
 
     @IBOutlet weak var imgenView: UIImageView!
@@ -23,7 +25,6 @@ class ClimaViewController: UIViewController {
     @IBOutlet weak var cargandoView: UIActivityIndicatorView!
     
     lazy var serviceData = NSMutableData()
-    var clima:Clima?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,12 +63,15 @@ class ClimaViewController: UIViewController {
     }
 
     func mostrarDatos(){
-        var rutaImg = "http://openweathermap.org/img/w/\(clima!.icono!).png"
-        let url = NSURL(string: rutaImg)
-        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-        imgenView.image = UIImage(data: data!)
+       // var rutaImg = "http://openweathermap.org/img/w/\(clima!.icono!).png"
+        
+//        var rutaImg = "http://icons.wxug.com/i/c/k/clear.gif"
+//        let url = NSURL(string: rutaImg)
+//        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
+//        imgenView.image = UIImage(data: data!)
+        imgenView.image = UIImage(named: "32.png")
         ciudadLabel.text = clima!.ciudad!
-        descripcionLabel.text = mayusculas(clima!.descripcion!)
+        descripcionLabel.text = clima!.descripcion!
         tempLabel.text = String (stringLiteral: "\(clima!.temp!)")
         temp_maxLabel.text = "\(clima!.temp_max!)"
         temp_minLabel.text = "\(clima!.temp_min!)"
@@ -76,11 +80,6 @@ class ClimaViewController: UIViewController {
         
     }
     
-    func mayusculas(string:String)->String{
-        var resul = string
-        resul.replaceRange(resul.startIndex...resul.startIndex, with: String(resul[resul.startIndex]).capitalizedString)
-        return resul
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

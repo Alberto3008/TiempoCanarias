@@ -20,6 +20,10 @@
 		D33EE1BA1ACC36CF00DC7E80 /* ClimaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */; };
 		D33EE1BD1ACC3A6C00DC7E80 /* Clima.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1BC1ACC3A6C00DC7E80 /* Clima.swift */; };
 		D34166B81ACCC02D00833D80 /* ClimaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */; };
+		D34166BA1ACCD02200833D80 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34166B91ACCD02200833D80 /* MapaViewController.swift */; };
+		D3438A001ACE06FB006DA17D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34389FF1ACE06FB006DA17D /* MapKit.framework */; };
+		D3438A021ACE0F1F006DA17D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3438A011ACE0F1F006DA17D /* CoreLocation.framework */; };
+		D38B773D1ACDA01800A6FB3E /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = D38B773C1ACDA01800A6FB3E /* 32.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaViewController.swift; sourceTree = "<group>"; };
 		D33EE1BC1ACC3A6C00DC7E80 /* Clima.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = Clima.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaTableViewCell.swift; sourceTree = "<group>"; };
+		D34166B91ACCD02200833D80 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		D34389FF1ACE06FB006DA17D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		D3438A011ACE0F1F006DA17D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		D38B773C1ACDA01800A6FB3E /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3438A021ACE0F1F006DA17D /* CoreLocation.framework in Frameworks */,
+				D3438A001ACE06FB006DA17D /* MapKit.framework in Frameworks */,
 				D33EE1A71ACAEB7200DC7E80 /* Crashlytics.framework in Frameworks */,
 				D33EE1A81ACAEB7200DC7E80 /* Fabric.framework in Frameworks */,
 			);
@@ -134,6 +144,7 @@
 		D31C732A1AC9D0C900371F1E /* img */ = {
 			isa = PBXGroup;
 			children = (
+				D38B773C1ACDA01800A6FB3E /* 32.png */,
 				D31C732B1AC9D0EF00371F1E /* laplaya.png */,
 			);
 			name = img;
@@ -142,6 +153,8 @@
 		D33EE1B01ACB6DE800DC7E80 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D3438A011ACE0F1F006DA17D /* CoreLocation.framework */,
+				D34389FF1ACE06FB006DA17D /* MapKit.framework */,
 				D33EE1A51ACAEB7200DC7E80 /* Crashlytics.framework */,
 				D33EE1A61ACAEB7200DC7E80 /* Fabric.framework */,
 			);
@@ -152,9 +165,10 @@
 			isa = PBXGroup;
 			children = (
 				D31C730C1AC9CF9D00371F1E /* ViewController.swift */,
-				D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */,
 				D33EE1B91ACC36CF00DC7E80 /* ClimaViewController.swift */,
+				D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */,
 				D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */,
+				D34166B91ACCD02200833D80 /* MapaViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -256,6 +270,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D38B773D1ACDA01800A6FB3E /* 32.png in Resources */,
 				D31C73101AC9CF9D00371F1E /* Main.storyboard in Resources */,
 				D31C73151AC9CF9D00371F1E /* LaunchScreen.xib in Resources */,
 				D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */,
@@ -297,6 +312,7 @@
 				D33EE1BD1ACC3A6C00DC7E80 /* Clima.swift in Sources */,
 				D31C730D1AC9CF9D00371F1E /* ViewController.swift in Sources */,
 				D33EE1BA1ACC36CF00DC7E80 /* ClimaViewController.swift in Sources */,
+				D34166BA1ACCD02200833D80 /* MapaViewController.swift in Sources */,
 				D31C730B1AC9CF9D00371F1E /* AppDelegate.swift in Sources */,
 				D33EE1B81ACC35CC00DC7E80 /* ClimaTableViewController.swift in Sources */,
 			);

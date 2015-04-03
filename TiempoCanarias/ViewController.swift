@@ -35,21 +35,16 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //log crash report
+        CLSLogv("ViewController.viewDidLoad()", getVaList([1]))
         ciudadPicker.reloadAllComponents()
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "laplaya.png")!)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    @IBAction func tiempoBttn(sender: AnyObject) {
-        CLSNSLogv("DIAOSASSJSAHJKSJKSKLJKLÑSADJKLASDJKL", getVaList([1]))
-        println(ciudades[ciudadPicker.selectedRowInComponent(0)].nombre)
-        CLSLogv("Pulsacion del boton = Log awesomeness %d %d %@", getVaList([1, 2, "three"]))
-       // Crashlytics.sharedInstance().crash()
-        
-        tiempoWebService()
-    }
     @IBAction func SelectBttn(sender: AnyObject) {
+        //log crash report
+        CLSLogv("ViewController.SelectBttn()", getVaList([1]))
         idCiudad = ciudades[ciudadPicker.selectedRowInComponent(0)].id
     }
 
@@ -76,79 +71,6 @@ class ViewController: UIViewController {
             self.nombre = nombre
             self.id = id
         }
-    }
-    
-// MARK: - WebService API OpenWeatherMap
-    func tiempoWebService(){
-       let urlPath = "http://api.openweathermap.org/data/2.5/weather?id=\(ciudades[ciudadPicker.selectedRowInComponent(0)].id)&lang=sp&units=metric"
-        let url = NSURL(string: urlPath)
-        
-        let session = NSURLSession.sharedSession()
-        
-        
-        let task = session.dataTaskWithURL(url!, completionHandler: {data, response, error -> Void in
-            
-            if(error != nil){
-                //Imprime si hay un error por consola
-                println(error.localizedDescription)
-            }
-            
-           var nsdata:NSData = NSData(data:data)
-
-           self.recuperarClima(nsdata)
-            
-            dispatch_async(dispatch_get_main_queue(), { self.mostrarDatos() })
-            
-        })
-        
-        task.resume()
-        
-        
-        
-        
-        
-    }
-    
-    func recuperarClima(nsdata:NSData){
-        
-        let jsonCompleto : AnyObject! = NSJSONSerialization.JSONObjectWithData(nsdata, options: NSJSONReadingOptions.MutableContainers, error: nil)
-        
-        
-        println(jsonCompleto)
-        
-//        let arregloJsonClima = jsonCompleto["weather"]
-//        
-//        if let jsonArray = arregloJsonClima as? NSArray{
-//            
-//            //Recorre por el array de la respues de json del servidor
-//            jsonArray.enumerateObjectsUsingBlock({model, index, stop in
-//                 self.desClima = model["description"] as? String
-//                 self.img = model["icon"] as? String
-//            });
-        
-        var nowClima = Clima.fromCurrentDictionary(jsonCompleto as NSDictionary)
-        println("Nombre: \(nowClima.ciudad)")
-        println("ID: \(nowClima.id)")
-        println("Fecha: \(nowClima.fecha)")
-        println("Humedad: \(nowClima.humedad)")
-        println("Icono: \(nowClima.icono)")
-        println("Descripcion: \(nowClima.descripcion)")
-        println("Latitud: \(nowClima.latitud)")
-        println("Longitud: \(nowClima.longitud)")
-        println("Temperatura: \(nowClima.temp)")
-        println("MAX: \(nowClima.temp_max)")
-        println("MIN: \(nowClima.temp_min)")
-        println("Velocidad: \(nowClima.viento_vel)")
-    }
-    
-
-    func mostrarDatos(){
-//         println(self.desClima!);
-//        self.climaLabel.text = self.desClima!
-//        var rutaImg = "http://openweathermap.org/img/w/\(self.img!).png"
-//        let url = NSURL(string: rutaImg)
-//        let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
-//        self.climaImg.image = UIImage(data: data!)
     }
     
     override func didReceiveMemoryWarning() {

@@ -17,6 +17,7 @@ class ClimaTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("hola climaTabla! tu ciudad es:\(idCiudad)")
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "laplaya.png")!)
         requestClima()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -76,7 +77,7 @@ class ClimaTableViewController: UITableViewController {
         let url = NSURL(string: rutaImg)
         let data = NSData(contentsOfURL: url!) //make sure your image in this url does exist, otherwise unwrap in a if let check
         cell.imageView!.image = UIImage(data: data!)
-        cell.descripcionLabel!.text = mayusculas(clima.descripcion!)
+        cell.descripcionLabel!.text = clima.descripcion!
         
         let dayTimePeriodFormatter = NSDateFormatter()
         dayTimePeriodFormatter.dateFormat = "EEEE"
@@ -89,13 +90,13 @@ class ClimaTableViewController: UITableViewController {
         return cell
     }
     
+    
     func mayusculas(string:String)->String{
         var resul = string
         resul.replaceRange(resul.startIndex...resul.startIndex, with: String(resul[resul.startIndex]).capitalizedString)
         return resul
     }
-
-
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
