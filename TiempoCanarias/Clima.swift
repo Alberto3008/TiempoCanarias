@@ -44,7 +44,7 @@ class Clima {
             let ciudad = dictionary["name"] as? String
             let id = dictionary["id"] as? NSInteger
             
-            let coordenadas = dictionary["coord"] as NSDictionary
+            let coordenadas = dictionary["coord"] as! NSDictionary
             println("COORDENADAS >>>\(coordenadas)")
             
             let latitud = coordenadas["lat"] as?  Double
@@ -53,7 +53,7 @@ class Clima {
             var fechaunix = dictionary["dt"] as? NSTimeInterval
             let fecha:NSDate = NSDate (timeIntervalSince1970: fechaunix!)
             
-            var main = dictionary["main"] as NSDictionary
+            var main = dictionary["main"] as! NSDictionary
             let temp = main["temp"] as? Double
             let temp_max = main["temp_max"] as? Double
             let temp_min = main["temp_min"] as? Double
@@ -63,7 +63,7 @@ class Clima {
             var icono = item["icon"] as? String
 
             
-            var viento = dictionary["wind"] as NSDictionary
+            var viento = dictionary["wind"] as! NSDictionary
             let viento_vel = viento["speed"] as? Double
             
            
@@ -91,18 +91,18 @@ class Clima {
         
         list?.enumerateObjectsWithOptions(NSEnumerationOptions.allZeros, usingBlock: { (item, idx, stop) -> Void in
             
-            let lugar = dictionary["city"] as NSDictionary
+            let lugar = dictionary["city"] as! NSDictionary
             let ciudad = lugar["name"] as? String
             let id = lugar["id"] as? NSInteger
             
-            let coordenadas = lugar["coord"] as NSDictionary
+            let coordenadas = lugar["coord"] as! NSDictionary
             let latitud = coordenadas["lat"] as?  Double
             let longitud = coordenadas["lon"] as? Double
             
             var fechaunix = item["dt"] as? NSTimeInterval
             let fecha:NSDate = NSDate (timeIntervalSince1970: fechaunix!)
             
-            var main = item["temp"] as NSDictionary
+            var main = item["temp"] as! NSDictionary
             let temp = main["day"] as? Double
             let temp_max = main["max"] as? Double
             let temp_min = main["min"] as? Double
@@ -114,8 +114,8 @@ class Clima {
             var icono:String = ""
             
             tiempo?.enumerateObjectsWithOptions(NSEnumerationOptions.allZeros, usingBlock: { (item, idx, stop) -> Void in
-                descripcion = item["description"] as String
-                icono = item["icon"] as String
+                descripcion = item["description"] as! String
+                icono = item["icon"] as! String
             })
             if icono == "01n" { icono = "01d" }
             

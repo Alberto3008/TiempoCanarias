@@ -28,7 +28,8 @@ class ClimaViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "laplaya.png")!)
+         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "fondo1.jpg")!)
+        SwiftSpinner.show("Cargando datos de hoy...")
         cargandoView.startAnimating()
         println("Hola view Clima tu ciudad es:\(idCiudad)")
         if clima == nil || idCiudad != clima!.id! {
@@ -53,13 +54,14 @@ class ClimaViewController: UIViewController {
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
-        var json = NSJSONSerialization.JSONObjectWithData(serviceData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        var json = NSJSONSerialization.JSONObjectWithData(serviceData, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
         
         clima = Clima.fromCurrentDictionary(json)
         //    println(friends)
         
         mostrarDatos()
         cargandoView.stopAnimating()
+        SwiftSpinner.hide()
     }
 
     func mostrarDatos(){
@@ -77,6 +79,15 @@ class ClimaViewController: UIViewController {
         temp_minLabel.text = "\(clima!.temp_min!)"
         humedadLabel.text = "\(clima!.humedad!)"
         vientoLabel.text = "\(clima!.viento_vel!)"
+        
+//       var storyboard = UIApplication.sharedApplication.delegate.window.rootViewController.storyboard
+        var storyboard = UIApplication.sharedApplication().delegate?.window!?.rootViewController?.storyboard
+        (storyboard!.instantiateViewControllerWithIdentifier("climaTab")as! ClimaTabViewController).navItem.title = "MEWKEJNAJKEAWIE"
+//        climaTab.navItem.title = clima!.ciudad!
+//        println("Texto desde view del tab : \(climaTab.navItem.title!)")
+//
+//        climaTab.navItem.title = "JODERR"
+        self.navigationItem.title = clima?.ciudad!
         
     }
     

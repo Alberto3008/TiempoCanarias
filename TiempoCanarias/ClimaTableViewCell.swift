@@ -17,7 +17,16 @@ class ClimaTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.5)
+//        self.backgroundColor = UIColor.whiteColor().colorWithAlphaComponent(0.2)
+      self.backgroundColor = UIColor.clearColor()
+//
+////
+        var effect = UIBlurEffect(style: UIBlurEffectStyle.Light)
+        
+        var blurView = UIVisualEffectView(effect: effect)
+        blurView.frame = self.frame
+        blurView.center = self.center
+        self.backgroundView = blurView
     }
     
 

@@ -17,9 +17,19 @@ class ClimaTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         println("hola climaTabla! tu ciudad es:\(idCiudad)")
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "laplaya.png")!)
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "playa.jpg")!)
+        SwiftSpinner.show("Cargando datos de los proximos 7 dias...")
         requestClima()
-        // Uncomment the following line to preserve selection between presentations
+        
+        self.tableView.addPullToRefresh({ [weak self] in
+            self?.requestClima()
+            self?.serviceData = NSMutableData()
+            self?.tableView.reloadData()
+            self?.tableView.stopPullToRefresh()
+        })
+        
+        
+              // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -45,12 +55,13 @@ class ClimaTableViewController: UITableViewController {
     }
     
     func connectionDidFinishLoading(connection: NSURLConnection) {
-        var json = NSJSONSerialization.JSONObjectWithData(serviceData, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+        var json = NSJSONSerialization.JSONObjectWithData(serviceData, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
         
         climas = Clima.fromForecastDictionary(json)
         //    println(friends)
         
         tableView.reloadData()
+        SwiftSpinner.hide()
     }
 
     
@@ -70,7 +81,7 @@ class ClimaTableViewController: UITableViewController {
 
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("ClimaDiaCell", forIndexPath: indexPath) as ClimaTableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("ClimaDiaCell", forIndexPath: indexPath) as! ClimaTableViewCell
         let clima = climas![indexPath.row]
         
         var rutaImg = "http://openweathermap.org/img/w/\(clima.icono!).png"
@@ -86,6 +97,7 @@ class ClimaTableViewController: UITableViewController {
         var dateString = dayTimePeriodFormatter.stringFromDate(clima.fecha!)
         dateString = mayusculas(dateString)
         cell.fechaLabel!.text = dateString
+       
         
         return cell
     }

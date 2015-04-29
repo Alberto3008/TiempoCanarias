@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B70A69B5A60E5BCBA02218B /* Pods_TiempoCanarias.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBA75FE8469F4E01CB2EED08 /* Pods_TiempoCanarias.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		D31C730B1AC9CF9D00371F1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C730A1AC9CF9D00371F1E /* AppDelegate.swift */; };
 		D31C730D1AC9CF9D00371F1E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C730C1AC9CF9D00371F1E /* ViewController.swift */; };
 		D31C73101AC9CF9D00371F1E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D31C730E1AC9CF9D00371F1E /* Main.storyboard */; };
 		D31C73121AC9CF9D00371F1E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D31C73111AC9CF9D00371F1E /* Images.xcassets */; };
 		D31C73151AC9CF9D00371F1E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D31C73131AC9CF9D00371F1E /* LaunchScreen.xib */; };
 		D31C73211AC9CF9D00371F1E /* TiempoCanariasTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D31C73201AC9CF9D00371F1E /* TiempoCanariasTests.swift */; };
-		D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */ = {isa = PBXBuildFile; fileRef = D31C732B1AC9D0EF00371F1E /* laplaya.png */; };
+		D3232A121ACF0865004DC36D /* fondo1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3232A111ACF0865004DC36D /* fondo1.jpg */; };
+		D3232A141ACF0FC1004DC36D /* ClimaTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3232A131ACF0FC1004DC36D /* ClimaTabViewController.swift */; };
+		D3232A201ACF6B1C004DC36D /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3232A1F1ACF6B1C004DC36D /* SwiftSpinner.swift */; };
 		D33EE1A71ACAEB7200DC7E80 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33EE1A51ACAEB7200DC7E80 /* Crashlytics.framework */; };
 		D33EE1A81ACAEB7200DC7E80 /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D33EE1A61ACAEB7200DC7E80 /* Fabric.framework */; };
 		D33EE1B81ACC35CC00DC7E80 /* ClimaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */; };
@@ -23,7 +26,11 @@
 		D34166BA1ACCD02200833D80 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34166B91ACCD02200833D80 /* MapaViewController.swift */; };
 		D3438A001ACE06FB006DA17D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34389FF1ACE06FB006DA17D /* MapKit.framework */; };
 		D3438A021ACE0F1F006DA17D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3438A011ACE0F1F006DA17D /* CoreLocation.framework */; };
-		D38B773D1ACDA01800A6FB3E /* 32.png in Resources */ = {isa = PBXBuildFile; fileRef = D38B773C1ACDA01800A6FB3E /* 32.png */; };
+		D39FD3B51AD3E25000D3D322 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39FD3B41AD3E25000D3D322 /* Reachability.swift */; };
+		D3C7B0AF1AF13B7C0059BE66 /* PullToRefreshOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7B0AC1AF13B7C0059BE66 /* PullToRefreshOption.swift */; };
+		D3C7B0B01AF13B7C0059BE66 /* PullToRefreshView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7B0AD1AF13B7C0059BE66 /* PullToRefreshView.swift */; };
+		D3C7B0B11AF13B7C0059BE66 /* UIScrollViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C7B0AE1AF13B7C0059BE66 /* UIScrollViewExtension.swift */; };
+		D3FA48141AD0A89B002CA9CA /* playa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3FA48131AD0A89B002CA9CA /* playa.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05CD723BF67ED4E1C6CF4026 /* Pods-TiempoCanarias.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiempoCanarias.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TiempoCanarias/Pods-TiempoCanarias.debug.xcconfig"; sourceTree = "<group>"; };
+		270482C6AB9447A36049C7EE /* Pods-TiempoCanarias.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TiempoCanarias.release.xcconfig"; path = "Pods/Target Support Files/Pods-TiempoCanarias/Pods-TiempoCanarias.release.xcconfig"; sourceTree = "<group>"; };
 		D31C73051AC9CF9D00371F1E /* TiempoCanarias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiempoCanarias.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31C73091AC9CF9D00371F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D31C730A1AC9CF9D00371F1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,7 +56,9 @@
 		D31C731A1AC9CF9D00371F1E /* TiempoCanariasTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiempoCanariasTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D31C731F1AC9CF9D00371F1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D31C73201AC9CF9D00371F1E /* TiempoCanariasTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiempoCanariasTests.swift; sourceTree = "<group>"; };
-		D31C732B1AC9D0EF00371F1E /* laplaya.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = laplaya.png; sourceTree = "<group>"; };
+		D3232A111ACF0865004DC36D /* fondo1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fondo1.jpg; sourceTree = "<group>"; };
+		D3232A131ACF0FC1004DC36D /* ClimaTabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaTabViewController.swift; sourceTree = "<group>"; };
+		D3232A1F1ACF6B1C004DC36D /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
 		D33EE1A51ACAEB7200DC7E80 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Crashlytics.framework; path = ../Crashlytics.framework; sourceTree = "<group>"; };
 		D33EE1A61ACAEB7200DC7E80 /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fabric.framework; path = ../Fabric.framework; sourceTree = "<group>"; };
 		D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ClimaTableViewController.swift; sourceTree = "<group>"; };
@@ -57,7 +68,12 @@
 		D34166B91ACCD02200833D80 /* MapaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		D34389FF1ACE06FB006DA17D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		D3438A011ACE0F1F006DA17D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		D38B773C1ACDA01800A6FB3E /* 32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 32.png; sourceTree = "<group>"; };
+		D39FD3B41AD3E25000D3D322 /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		D3C7B0AC1AF13B7C0059BE66 /* PullToRefreshOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshOption.swift; sourceTree = "<group>"; };
+		D3C7B0AD1AF13B7C0059BE66 /* PullToRefreshView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PullToRefreshView.swift; sourceTree = "<group>"; };
+		D3C7B0AE1AF13B7C0059BE66 /* UIScrollViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIScrollViewExtension.swift; sourceTree = "<group>"; };
+		D3FA48131AD0A89B002CA9CA /* playa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = playa.jpg; sourceTree = "<group>"; };
+		FBA75FE8469F4E01CB2EED08 /* Pods_TiempoCanarias.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TiempoCanarias.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +85,7 @@
 				D3438A001ACE06FB006DA17D /* MapKit.framework in Frameworks */,
 				D33EE1A71ACAEB7200DC7E80 /* Crashlytics.framework in Frameworks */,
 				D33EE1A81ACAEB7200DC7E80 /* Fabric.framework in Frameworks */,
+				7B70A69B5A60E5BCBA02218B /* Pods_TiempoCanarias.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,12 +99,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		342E42C23EA9F4C0CC7F26B1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				05CD723BF67ED4E1C6CF4026 /* Pods-TiempoCanarias.debug.xcconfig */,
+				270482C6AB9447A36049C7EE /* Pods-TiempoCanarias.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		874B644C6883832C269EEC2F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBA75FE8469F4E01CB2EED08 /* Pods_TiempoCanarias.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D31C72FC1AC9CF9D00371F1E = {
 			isa = PBXGroup;
 			children = (
 				D31C73071AC9CF9D00371F1E /* TiempoCanarias */,
 				D31C731D1AC9CF9D00371F1E /* TiempoCanariasTests */,
 				D31C73061AC9CF9D00371F1E /* Products */,
+				342E42C23EA9F4C0CC7F26B1 /* Pods */,
+				874B644C6883832C269EEC2F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -108,7 +144,6 @@
 				D33EE1B31ACB6FC800DC7E80 /* Controllers */,
 				D33EE1B41ACB6FED00DC7E80 /* Views */,
 				D31C73111AC9CF9D00371F1E /* Images.xcassets */,
-				D31C73131AC9CF9D00371F1E /* LaunchScreen.xib */,
 				D33EE1B01ACB6DE800DC7E80 /* Frameworks */,
 				D31C73081AC9CF9D00371F1E /* Supporting Files */,
 			);
@@ -118,6 +153,9 @@
 		D31C73081AC9CF9D00371F1E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D39FD3B41AD3E25000D3D322 /* Reachability.swift */,
+				D3232A1E1ACF6B1C004DC36D /* SwiftSpinner */,
+				D3232A151ACF6710004DC36D /* PullToRefreshSwift */,
 				D31C732A1AC9D0C900371F1E /* img */,
 				D31C73091AC9CF9D00371F1E /* Info.plist */,
 			);
@@ -144,10 +182,29 @@
 		D31C732A1AC9D0C900371F1E /* img */ = {
 			isa = PBXGroup;
 			children = (
-				D38B773C1ACDA01800A6FB3E /* 32.png */,
-				D31C732B1AC9D0EF00371F1E /* laplaya.png */,
+				D3FA48131AD0A89B002CA9CA /* playa.jpg */,
+				D3232A111ACF0865004DC36D /* fondo1.jpg */,
 			);
 			name = img;
+			sourceTree = "<group>";
+		};
+		D3232A151ACF6710004DC36D /* PullToRefreshSwift */ = {
+			isa = PBXGroup;
+			children = (
+				D3C7B0AC1AF13B7C0059BE66 /* PullToRefreshOption.swift */,
+				D3C7B0AD1AF13B7C0059BE66 /* PullToRefreshView.swift */,
+				D3C7B0AE1AF13B7C0059BE66 /* UIScrollViewExtension.swift */,
+			);
+			name = PullToRefreshSwift;
+			path = Source;
+			sourceTree = "<group>";
+		};
+		D3232A1E1ACF6B1C004DC36D /* SwiftSpinner */ = {
+			isa = PBXGroup;
+			children = (
+				D3232A1F1ACF6B1C004DC36D /* SwiftSpinner.swift */,
+			);
+			path = SwiftSpinner;
 			sourceTree = "<group>";
 		};
 		D33EE1B01ACB6DE800DC7E80 /* Frameworks */ = {
@@ -169,6 +226,7 @@
 				D33EE1B71ACC35CC00DC7E80 /* ClimaTableViewController.swift */,
 				D34166B71ACCC02D00833D80 /* ClimaTableViewCell.swift */,
 				D34166B91ACCD02200833D80 /* MapaViewController.swift */,
+				D3232A131ACF0FC1004DC36D /* ClimaTabViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -177,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				D31C730E1AC9CF9D00371F1E /* Main.storyboard */,
+				D31C73131AC9CF9D00371F1E /* LaunchScreen.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -196,10 +255,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D31C73241AC9CF9D00371F1E /* Build configuration list for PBXNativeTarget "TiempoCanarias" */;
 			buildPhases = (
+				F9580B52B883032976FEA5CD /* Check Pods Manifest.lock */,
 				D31C73011AC9CF9D00371F1E /* Sources */,
 				D31C73021AC9CF9D00371F1E /* Frameworks */,
 				D31C73031AC9CF9D00371F1E /* Resources */,
 				D33EE1A41ACAEB1D00DC7E80 /* ShellScript */,
+				7EF3B8C1E330661A914011AD /* Embed Pods Frameworks */,
+				8C6432AFE502EDFBAA90BEAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -270,11 +332,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D38B773D1ACDA01800A6FB3E /* 32.png in Resources */,
+				D3232A121ACF0865004DC36D /* fondo1.jpg in Resources */,
 				D31C73101AC9CF9D00371F1E /* Main.storyboard in Resources */,
 				D31C73151AC9CF9D00371F1E /* LaunchScreen.xib in Resources */,
-				D31C732C1AC9D0EF00371F1E /* laplaya.png in Resources */,
 				D31C73121AC9CF9D00371F1E /* Images.xcassets in Resources */,
+				D3FA48141AD0A89B002CA9CA /* playa.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,6 +350,36 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		7EF3B8C1E330661A914011AD /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TiempoCanarias/Pods-TiempoCanarias-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C6432AFE502EDFBAA90BEAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TiempoCanarias/Pods-TiempoCanarias-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		D33EE1A41ACAEB1D00DC7E80 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +393,21 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run 977a384cbc37ca03b665b433f91e0364f3834f3f 28251e866c714c83096537542bcd7200024a3b582bd517d7e15c93f35561f593";
 		};
+		F9580B52B883032976FEA5CD /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -310,11 +417,17 @@
 			files = (
 				D34166B81ACCC02D00833D80 /* ClimaTableViewCell.swift in Sources */,
 				D33EE1BD1ACC3A6C00DC7E80 /* Clima.swift in Sources */,
+				D3C7B0AF1AF13B7C0059BE66 /* PullToRefreshOption.swift in Sources */,
 				D31C730D1AC9CF9D00371F1E /* ViewController.swift in Sources */,
+				D3232A201ACF6B1C004DC36D /* SwiftSpinner.swift in Sources */,
+				D3232A141ACF0FC1004DC36D /* ClimaTabViewController.swift in Sources */,
 				D33EE1BA1ACC36CF00DC7E80 /* ClimaViewController.swift in Sources */,
 				D34166BA1ACCD02200833D80 /* MapaViewController.swift in Sources */,
+				D3C7B0B01AF13B7C0059BE66 /* PullToRefreshView.swift in Sources */,
 				D31C730B1AC9CF9D00371F1E /* AppDelegate.swift in Sources */,
+				D3C7B0B11AF13B7C0059BE66 /* UIScrollViewExtension.swift in Sources */,
 				D33EE1B81ACC35CC00DC7E80 /* ClimaTableViewController.swift in Sources */,
+				D39FD3B51AD3E25000D3D322 /* Reachability.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +548,7 @@
 		};
 		D31C73251AC9CF9D00371F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05CD723BF67ED4E1C6CF4026 /* Pods-TiempoCanarias.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -449,6 +563,7 @@
 		};
 		D31C73261AC9CF9D00371F1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 270482C6AB9447A36049C7EE /* Pods-TiempoCanarias.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
